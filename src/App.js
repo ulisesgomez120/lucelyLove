@@ -1,25 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, Fragment } from "react";
+import EnglishContainer from "./components/english/EnglishContainer";
+import SpanishContainer from "./components/spanish/SpanishContainer";
+import Acuity from "./components/Acuity";
+import Header from "./components/header/Header";
 
 function App() {
+  const [language, setLanguage] = useState("en");
+
+  const handleLanguage = (event) => {
+    setLanguage(event.target.value);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <Header handleLanguage={handleLanguage} currentLanguage={language} />
+      <main>
+        {language === "en" ? <EnglishContainer /> : <SpanishContainer />}
+        <Acuity />
+      </main>
+    </Fragment>
   );
 }
 
