@@ -8,13 +8,17 @@ const Container = styled.div`
   display: flex;
   width: 100%;
   justify-content: center;
+  flex-wrap: wrap;
 `;
 const Card = styled.article`
   border: 4px solid #f3e2e2;
   border-radius: 6px;
   padding: 20px;
   text-align: center;
-  margin: 0 25px;
+  margin: 0 25px 25px 0;
+  @media (max-width: 460px) {
+    margin: 25px 0;
+  }
 `;
 const Name = styled.p`
   font-size: 19px;
@@ -22,9 +26,25 @@ const Name = styled.p`
   margin-bottom: 16px;
 `;
 const Icon = styled.img`
-  margin-bottom: 16px;
+  display: block;
+  margin: 0 auto 11px;
+  background: #f3e2e2;
+  padding: 15px;
+  border-radius: 50%;
 `;
-const Amount = styled.div``;
+const Amount = styled.p`
+  font-size: 21px;
+  font-weight: bold;
+  margin-bottom: 11px;
+`;
+const FbBanner = styled(Card)`
+  border: 4px solid #7b9996;
+  margin: 0 auto;
+  width: 65%;
+  @media (max-width: 736px) {
+    width: 100%;
+  }
+`;
 const Heading = styled.h2`
   font-family: "Cormorant Garamond", serif;
   text-align: center;
@@ -33,23 +53,24 @@ const Heading = styled.h2`
   text-transform: capitalize;
 `;
 const Section = styled.section`
-  
   padding: 30px 15px;
-@media (min-width: 736px) {
+  @media (min-width: 736px) {
     padding: 30px 55px;
-
+  }
 `;
-const Services = ({ heading, data, hosted }) => {
+const Services = ({ heading, data, hosted, banner }) => {
   const iconUrls = {
     Chat: ChatIcon,
+    "Chat De Texto": ChatIcon,
     Phone: PhoneIcon,
+    Teléfono: PhoneIcon,
     Video: VideoIcon,
   };
   const ServicesJsx = data.map(({ name, description, amount, duration }, i) => {
     return (
-      <Card>
+      <Card key={`${i}${name}`}>
         <Name>{name}</Name>
-        <Icon src={iconUrls[name]} />
+        <Icon src={iconUrls[name]} alt="name" />
         <Amount>{amount}</Amount>
         <p>
           {duration} {description}
@@ -62,6 +83,7 @@ const Services = ({ heading, data, hosted }) => {
     <Section>
       <Heading>{heading}</Heading>
       <Container>{ServicesJsx}</Container>
+      <FbBanner>{banner}</FbBanner>
     </Section>
   );
 };

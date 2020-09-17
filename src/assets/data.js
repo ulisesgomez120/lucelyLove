@@ -34,3 +34,44 @@ export const englishServices = [
     duration: "50",
   },
 ];
+export const spanishReviews = [
+  {
+    name: "Irene",
+    excerpt: "Mi relacion de pareja es mil veces mejor...",
+    review:
+      "Tue consejos me han servido para cambiar mi estilo de vida en general, para mejor por supuesto. He alejado de mi vida a las amistades que me hacian daño, mi amistad es muy valiosa, asi que no voy a consentir que nadie la pisotee. Tambien he aprendido a quererme más a mi misma. Mi relacion de pareja es mil veces mejor de lo que era antes, y todo gracias a tus consejos. Hacer que él sea el que me 'persiga' a mí me hace mas feliz, y yo al estar más feliz también lo hago más feliz a él. He aprendido que mi compañía es valiosa en todos los sentidos, así que, no me voy a conformar con poco.",
+  },
+  {
+    name: "Meli",
+    excerpt: "Tus consejos me abrieron los ojos...",
+    review:
+      "Antes pensaba como muchos de los que te critican, hasta que comencé a ver tus videos y vi que tienes razón en todo, además ahora aconsejo a mis amigas y a mi hija sobre lo que verdaderamente importa a la hora de elegir pareja. He cometido tantos errores en el pasado por enamorarme de hombres que nunca me demostraron su amor, y no solo con detalles, obsequios, ni cosas caras, simplemente no se esforzaban nada en la relación y yo daba más de lo que recibía y pensaba qué haciendo eso y ellos me iban a valorar más y al final terminaba con el corazón roto y arrepentida de haberle dado mi amor y atención a alguien que no lo merecía. Así que muchas gracias y espero sigas ayudándonos a más mujeres.",
+  },
+  {
+    name: "Zaira",
+    excerpt: "me han dicho que me veo con mucho más brillo que antes.",
+    review:
+      "Hola, Tania. Tus consejos me han ayudado muchísimo, antes me sentia fea y tenia tantos problemas con mi pareja y yo me conformaba con eso, pensaba 'al menos tengo a alguien' desde que empecé a ver tus vídeos me arreglo todos los días, me siento con mucha más autoestima. De echo, quise empezar a estudiar una carrera y me inscribí ayer :) también deje a mi ex novio, decidí ver por mi misma y entendí que estaba dando mas yo que el. Incluso me han dicho que me veo con mucho más brillo que antes. Muchas gracias, Tania. Éxito en todo.",
+  },
+];
+
+export const spanishServices = [
+  {
+    name: "Chat De Texto",
+    description: "Minutos chat de texto",
+    amount: "$20/$40",
+    duration: "20/45",
+  },
+  {
+    name: "Teléfono",
+    description: "Minutos de llamada",
+    amount: "$90",
+    duration: "45",
+  },
+  {
+    name: "Video",
+    description: "Minutos de llamada en video",
+    amount: "$120",
+    duration: "50",
+  },
+];

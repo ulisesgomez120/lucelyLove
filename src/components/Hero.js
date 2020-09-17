@@ -67,7 +67,7 @@ const Cta = styled.a`
   text-transform: capitalize;
   margin: 14px auto;
 `;
-const Hero = ({ heading, subheading, title }) => {
+const Hero = ({ heading, subheading, title, cta }) => {
   return (
     <HeroContainer>
       <FlexChild className="textContainer">
@@ -75,7 +75,7 @@ const Hero = ({ heading, subheading, title }) => {
           <Title>{title}</Title>
           <H1>{heading}</H1>
           <Subheading>{subheading}</Subheading>
-          <Cta href="#scheduler">schedule now</Cta>
+          <Cta href="#scheduler">{cta}</Cta>
         </ContainerForMobileOverlay>
       </FlexChild>
       <FlexChild className="heroImg" />
