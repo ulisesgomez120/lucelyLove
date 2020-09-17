@@ -13,7 +13,7 @@ const Container = styled.div`
 const Card = styled.article`
   border: 4px solid #f3e2e2;
   border-radius: 6px;
-  padding: 20px;
+  padding: 33px 24px;
   text-align: center;
   margin: 0 25px 25px 0;
   @media (max-width: 460px) {
