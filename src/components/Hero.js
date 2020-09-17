@@ -44,19 +44,29 @@ const Title = styled.span`
   letter-spacing: 2px;
   display: block;
   margin-bottom: 8px;
-  // text-align: right;
   font-family: "Tangerine", cursive;
-  font-size: 24px;
+  font-size: 26px;
 `;
 const H1 = styled.h1`
-  font-size: 2em;
+  font-size: 2.1em;
   letter-spacing: 1px;
   font-family: "Cormorant Garamond", serif;
 `;
 const Subheading = styled.p`
   font-family: "Cormorant Garamond", serif;
+  font-size: 18px;
 `;
-const Cta = styled.a``;
+const Cta = styled.a`
+  text-decoration: none;
+  display: block;
+  color: white;
+  background-color: #7b9996;
+  width: fit-content;
+  padding: 6px 13px;
+  border-radius: 6px;
+  text-transform: capitalize;
+  margin: 14px auto;
+`;
 const Hero = ({ heading, subheading, title }) => {
   return (
     <HeroContainer>
@@ -65,8 +75,8 @@ const Hero = ({ heading, subheading, title }) => {
           <Title>{title}</Title>
           <H1>{heading}</H1>
           <Subheading>{subheading}</Subheading>
+          <Cta href="#scheduler">schedule now</Cta>
         </ContainerForMobileOverlay>
-        <Cta href="#scheduler">schedule now</Cta>
       </FlexChild>
       <FlexChild className="heroImg" />
     </HeroContainer>

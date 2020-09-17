@@ -1,29 +1,59 @@
 import React from "react";
 import styled from "styled-components";
 
-const ReviewContainer = styled.article`
+const Section = styled.section`
+  background-color: #f3e2e2;
+  padding: 30px 15px;
+@media (min-width: 736px) {
+    padding: 30px 55px;
+
+`;
+const ReviewContainer = styled.details`
   width: 100%;
-  color: black;
+  margin-bottom: 24px;
+  & > summary {
+    cursor: pointer;
+    font-family: "Cormorant Garamond", serif;
+    outline: none;
+    color: #7b9996;
+    font-size: 22px;
+  }
+`;
+const Review = styled.p`
+  line-height: 23px;
+  text-indent: 15px;
+  font-size: 17px;
+  margin: 19px 0;
+`;
+const Reviewer = styled.p`
+  font-weight: bold;
+  font-size: 31px;
+  font-family: "Tangerine", cursive;
+  margin-left: 15px;
+`;
+const Heading = styled.h2`
+  font-family: "Cormorant Garamond", serif;
+  text-align: center;
+  font-size: 29px;
+  margin-bottom: 30px;
+  text-transform: capitalize;
 `;
 const Testimonials = ({ data, heading }) => {
-  // testimonal obj into jsx, div with excerpt for heading, then full review and name at bottom
-  // https://www.google.com/url?sa=i&url=https%3A%2F%2Fsumo.com%2Fstories%2Ftestimonial-examples&psig=AOvVaw1_T550kf9Xh6EwuK5javLd&ust=1600113319065000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKikh_P05usCFQAAAAAdAAAAABAD
-
-  const reviewsJsx = data.map(({ excerpt, review, name }) => {
+  const reviewsJsx = data.map(({ excerpt, review, name }, i) => {
     return (
-      <ReviewContainer>
-        <h3>{excerpt}</h3>
-        <p>{review}</p>
-        <h4>{name}</h4>
+      <ReviewContainer open key={i}>
+        <summary>{excerpt}</summary>
+        <Review>{review}</Review>
+        <Reviewer>- {name}</Reviewer>
       </ReviewContainer>
     );
   });
 
   return (
-    <section>
-      <h2>{heading}</h2>
+    <Section>
+      <Heading>{heading}</Heading>
       {reviewsJsx}
-    </section>
+    </Section>
   );
 };
 
