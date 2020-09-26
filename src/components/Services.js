@@ -59,7 +59,7 @@ const Services = ({ heading, data, hosted, language }) => {
     Teléfono: PhoneIcon,
     Video: VideoIcon,
   };
-  const ServicesJsx = data.map(({ name, description, amount, duration }, i) => {
+  const servicesJsx = data.map(({ name, description, amount, duration }, i) => {
     return (
       <Card key={`${i}${name}`}>
         <Name>{name}</Name>
@@ -75,7 +75,7 @@ const Services = ({ heading, data, hosted, language }) => {
   return (
     <Section>
       <Heading>{heading}</Heading>
-      <Container>{ServicesJsx}</Container>
+      <Container>{servicesJsx}</Container>
       <FbBanner language={language} />
     </Section>
   );
