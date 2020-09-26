@@ -1,6 +1,4 @@
 import React, { useState, Fragment } from "react";
-// import EnglishContainer from "./components/english/EnglishContainer";
-// import SpanishContainer from "./components/spanish/SpanishContainer";
 import Acuity from "./components/Acuity";
 import Header from "./components/header/Header";
 import Hero from "./components/Hero";
@@ -19,22 +17,21 @@ function App() {
     <Fragment>
       <Header handleLanguage={handleLanguage} currentLanguage={language} />
       <main>
-        {/* {language === "en" ? <EnglishContainer /> : <SpanishContainer />} */}
         <Hero
-          title="Lucely Love Coach"
-          heading="Love Yourself First"
-          subheading="Life advice that puts you first"
-          cta="Schedule Now"
+          title={languageData.hero.title}
+          heading={languageData.hero.heading}
+          subheading={languageData.hero.subheading}
+          cta={languageData.hero.cta}
         />
         <Testimonials
-          heading="What People Are Saying"
-          data={languageData.reviews}
+          heading={languageData.testimonials.heading}
+          data={languageData.testimonials.reviews}
         />
         <Services
-          heading="Schedule Some Time With Me"
-          data={languageData.services}
-          hosted="Hosted Through Zoom"
-          banner={languageData.fbBanner}
+          heading={languageData.service.heading}
+          data={languageData.service.services}
+          hosted={languageData.service.hosted}
+          language={language}
         />
         <Acuity />
       </main>
