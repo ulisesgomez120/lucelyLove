@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import FbBanner from "./FbBanner";
 import ChatIcon from "../assets/icons/message-square.svg";
 import PhoneIcon from "../assets/icons/phone-call.svg";
 import VideoIcon from "../assets/icons/video.svg";
@@ -37,14 +38,6 @@ const Amount = styled.p`
   font-weight: bold;
   margin-bottom: 11px;
 `;
-const FbBanner = styled(Card)`
-  border: 4px solid #7b9996;
-  margin: 0 auto;
-  width: 65%;
-  @media (max-width: 736px) {
-    width: 100%;
-  }
-`;
 const Heading = styled.h2`
   font-family: "Cormorant Garamond", serif;
   text-align: center;
@@ -58,7 +51,7 @@ const Section = styled.section`
     padding: 30px 55px;
   }
 `;
-const Services = ({ heading, data, hosted, banner }) => {
+const Services = ({ heading, data, hosted, language }) => {
   const iconUrls = {
     Chat: ChatIcon,
     "Chat De Texto": ChatIcon,
@@ -66,7 +59,7 @@ const Services = ({ heading, data, hosted, banner }) => {
     Teléfono: PhoneIcon,
     Video: VideoIcon,
   };
-  const ServicesJsx = data.map(({ name, description, amount, duration }, i) => {
+  const servicesJsx = data.map(({ name, description, amount, duration }, i) => {
     return (
       <Card key={`${i}${name}`}>
         <Name>{name}</Name>
@@ -82,8 +75,8 @@ const Services = ({ heading, data, hosted, banner }) => {
   return (
     <Section>
       <Heading>{heading}</Heading>
-      <Container>{ServicesJsx}</Container>
-      <FbBanner>{banner}</FbBanner>
+      <Container>{servicesJsx}</Container>
+      <FbBanner language={language} />
     </Section>
   );
 };
