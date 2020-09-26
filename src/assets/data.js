@@ -1,3 +1,7 @@
+import React from "react";
+const emailLink = (
+  <a href="mailto:TaniaLucely143@gmail.com">TaniaLucely143@gmail.com</a>
+);
 export const englishData = {
   reviews: [
     {
@@ -39,10 +43,10 @@ export const englishData = {
       duration: "50",
     },
   ],
-  fbBanner: `Join my private Facebook Group! Send an email to{" "}
-      <a href="mailto:TaniaLucely143@gmail.com">TaniaLucely143@gmail.com</a>{" "}
-      with your name, age, and Facebook profile. (Facebook group is only in
-      Spanish)`,
+  fbBanner:
+    "Join my private Facebook Group! Send an email to " +
+    emailLink +
+    " with your name, age, and Facebook profile. (Facebook group is only in Spanish)",
 };
 
 export const spanishData = {
