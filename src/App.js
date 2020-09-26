@@ -3,7 +3,7 @@ import EnglishContainer from "./components/english/EnglishContainer";
 import SpanishContainer from "./components/spanish/SpanishContainer";
 import Acuity from "./components/Acuity";
 import Header from "./components/header/Header";
-
+import { englishData, spanishData } from "./assets/data";
 function App() {
   const [language, setLanguage] = useState("en");
 
