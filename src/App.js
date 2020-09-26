@@ -12,25 +12,26 @@ function App() {
   const handleLanguage = (event) => {
     setLanguage(event.target.value);
   };
-  let languageData = language === "en" ? englishData : spanishData;
+  let { hero, testimonials, service } =
+    language === "en" ? englishData : spanishData;
   return (
     <Fragment>
       <Header handleLanguage={handleLanguage} currentLanguage={language} />
       <main>
         <Hero
-          title={languageData.hero.title}
-          heading={languageData.hero.heading}
-          subheading={languageData.hero.subheading}
-          cta={languageData.hero.cta}
+          title={hero.title}
+          heading={hero.heading}
+          subheading={hero.subheading}
+          cta={hero.cta}
         />
         <Testimonials
-          heading={languageData.testimonials.heading}
-          data={languageData.testimonials.reviews}
+          heading={testimonials.heading}
+          data={testimonials.reviews}
         />
         <Services
-          heading={languageData.service.heading}
-          data={languageData.service.services}
-          hosted={languageData.service.hosted}
+          heading={service.heading}
+          data={service.services}
+          hosted={service.hosted}
           language={language}
         />
         <Acuity />
