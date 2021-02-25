@@ -138,7 +138,7 @@ export const spanishData = {
         name: "2 video llamadas en un mes",
         description: "Reciba 2 sesiónes de 45 minutos en un mes",
         price: "$220",
-        hosted: "video llamadas a través de Zoom",
+        hosted: "Video llamadas a través de Zoom",
         savings: "$60",
       },
     ],
