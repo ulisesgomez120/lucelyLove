@@ -7,7 +7,7 @@ import Services from "./components/Services";
 import { englishData, spanishData } from "./assets/data";
 
 function App() {
-  const [language, setLanguage] = useState("en");
+  const [language, setLanguage] = useState("es");
 
   const handleLanguage = (event) => {
     setLanguage(event.target.value);
@@ -30,8 +30,8 @@ function App() {
         />
         <Services
           heading={service.heading}
-          data={service.services}
-          hosted={service.hosted}
+          services={service.services}
+          packages={service.packages}
           language={language}
         />
         <Acuity />
