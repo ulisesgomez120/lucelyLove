@@ -43,7 +43,7 @@ export const englishData = {
         name: "3 Month Coaching",
         description: "Receive 12, 30 minute coaching sessions over 3 months",
         price: "$300",
-        hosted: "Phone Call through Zoom",
+        hosted: "Chat through Zoom",
         savings: "$75",
       },
       {
@@ -131,7 +131,7 @@ export const spanishData = {
         name: "Sesion de 3 meses",
         description: "Reciba 12 sesiónes de 30 minutos durante 3 meses",
         price: "$300",
-        hosted: "Llamada telefónica a través de Zoom",
+        hosted: "Chatear a través de Zoom",
         savings: "$75",
       },
       {
@@ -146,21 +146,21 @@ export const spanishData = {
       {
         name: "Chat De Texto",
         description: "Minutos chat de texto",
-        price: "$20/$40",
+        price: "$30/$60",
         duration: "20/45",
         hosted: "Alojado a través de Zoom",
       },
       {
         name: "Teléfono",
         description: "Minutos de llamada",
-        price: "$90",
+        price: "$100",
         duration: "45",
         hosted: "Alojado a través de Zoom",
       },
       {
         name: "Video",
         description: "Minutos de llamada en video",
-        price: "$120",
+        price: "$140",
         duration: "50",
         hosted: "Alojado a través de Zoom",
       },
