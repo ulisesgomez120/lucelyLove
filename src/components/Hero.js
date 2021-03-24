@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import heroImg from "../assets/images/t-lucely-min.png";
+import heroImg from "../assets/images/image0.jpeg";
 const HeroContainer = styled.section`
   width: 100%;
   height: 90vh;
@@ -21,6 +21,10 @@ const FlexChild = styled.div`
     background-image: url(${heroImg});
     background-position: center;
     background-size: cover;
+    @media (min-width: 1440px) {
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
   }
   @media (max-width: 879px) {
     flex: 1 0 100%;
@@ -70,15 +74,15 @@ const Cta = styled.a`
 const Hero = ({ heading, subheading, title, cta }) => {
   return (
     <HeroContainer>
-      <FlexChild className="textContainer">
+      <FlexChild className='textContainer'>
         <ContainerForMobileOverlay>
           <Title>{title}</Title>
           <H1>{heading}</H1>
           <Subheading>{subheading}</Subheading>
-          <Cta href="#scheduler">{cta}</Cta>
+          <Cta href='#scheduler'>{cta}</Cta>
         </ContainerForMobileOverlay>
       </FlexChild>
-      <FlexChild className="heroImg" />
+      <FlexChild className='heroImg' />
     </HeroContainer>
   );
 };
