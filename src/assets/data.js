@@ -129,14 +129,14 @@ export const spanishData = {
       },
       {
         name: "3 Llamadas Telefónicas",
-        description: "Reciba 12 sesiónes de 45 minutos",
+        description: "Reciba 3 sesiónes de 45 minutos",
         price: "$260",
         hosted: "Llamada a través de Zoom",
         savings: "$40",
       },
       {
         name: "3 Video Llamadas",
-        description: "Reciba 2 sesiónes de 45 minutos",
+        description: "Reciba 3 sesiónes de 45 minutos",
         price: "$360",
         hosted: "Video llamadas a través de Zoom",
         savings: "$60",
