@@ -79,7 +79,7 @@ export const englishData = {
       {
         name: "In Person",
         description: "in person coaching.",
-        price: "$350",
+        price: "$450",
         duration: "1 hour and 45 minute",
         hosted: "For women only in OC, LA, & Riverside, CA",
       },
@@ -168,7 +168,7 @@ export const spanishData = {
         // description and duration are switched because of spanish syntax
         name: "En Persona",
         description: "1 hora y 45 minutos.",
-        price: "$350",
+        price: "$450",
         duration: "Sesión presencial de",
         hosted: "Solo para mujeres en OC, LA y Riverside, CA",
       },
