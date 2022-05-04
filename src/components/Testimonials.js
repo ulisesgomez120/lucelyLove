@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const Section = styled.section`
-  background-color: #f3e2e2;
+  background-color: #f7f3ef;
   padding: 30px 15px;
 @media (min-width: 736px) {
     padding: 30px 55px;
@@ -15,7 +15,7 @@ const ReviewContainer = styled.details`
     cursor: pointer;
     font-family: "Cormorant Garamond", serif;
     outline: none;
-    color: #7b9996;
+    color: rgba(199, 5, 39, 0.8);
     font-size: 22px;
   }
 `;
@@ -34,7 +34,7 @@ const Reviewer = styled.p`
 const Heading = styled.h2`
   font-family: "Cormorant Garamond", serif;
   text-align: center;
-  font-size: 29px;
+  font-size: 40px;
   margin-bottom: 30px;
   text-transform: capitalize;
 `;

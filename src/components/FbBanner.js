@@ -12,7 +12,7 @@ const Card = styled.article`
   }
 `;
 const Fb = styled(Card)`
-  border: 4px solid #7b9996;
+  border: 4px solid rgba(199, 5, 39, 0.8);
   margin: 0 auto;
   width: 65%;
   @media (max-width: 736px) {
@@ -24,7 +24,7 @@ const FbBanner = ({ language }) => {
     en: (
       <p>
         Join my private Facebook Group! Send an email to{" "}
-        <a href="mailto:TaniaLucely143@gmail.com">TaniaLucely143@gmail.com</a>{" "}
+        <a href='mailto:TaniaLucely143@gmail.com'>TaniaLucely143@gmail.com</a>{" "}
         with your name, age, and Facebook profile. (Facebook group is only in
         Spanish)
       </p>
@@ -33,7 +33,7 @@ const FbBanner = ({ language }) => {
       <p>
         Si quieres ser parte del grupo SOY EL PREMIO en Facebook, envia un
         correo electrónico a{" "}
-        <a href="mailto:TaniaLucely143@gmail.com">TaniaLucely143@gmail.com</a>{" "}
+        <a href='mailto:TaniaLucely143@gmail.com'>TaniaLucely143@gmail.com</a>{" "}
         con tu nombre, edad, y tu perfil de Facebook.
       </p>
     ),

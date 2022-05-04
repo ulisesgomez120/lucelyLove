@@ -18,7 +18,7 @@ const PackageContainer = styled.div`
   flex-wrap: wrap;
 `;
 const Card = styled.article`
-  border: 4px solid #f3e2e2;
+  border: 4px solid rgba(199, 5, 39, 0.8);
   border-radius: 6px;
   padding: 33px 24px;
   text-align: center;
@@ -39,7 +39,7 @@ const Name = styled.p`
 const Icon = styled.img`
   display: block;
   margin: 0 auto 11px;
-  background: #f3e2e2;
+  background: rgba(199, 5, 39, 0.8);
   padding: 15px;
   border-radius: 50%;
 `;
